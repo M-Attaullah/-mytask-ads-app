@@ -20,6 +20,16 @@ A beautiful and functional notes application built with Flutter, featuring local
 ---
 
 
+## 📱 Screenshots
+
+| Home Screen | Add Note Screen | Note Details |
+|-------------|-----------------|--------------|
+| ![Home](screenshots/home.png) | ![Add Note](screenshots/add_note.png) | ![Details](screenshots/details.png) |
+
+> 📸 Place your screenshots in a `/screenshots` folder at project root.
+
+---
+
 
 ## 📂 Project Structure
 
@@ -154,8 +164,8 @@ CREATE TABLE notes(
 **Your Name**  
 Feel free to connect or contribute to this project.
 
-📧 [mattaullah9784@gmail.com](mattaullah9784@gmail.com)  
-🔗 [M-Attaullah](https://github.com/M-Attaullah)
+📧 [your.email@example.com](mailto:your.email@example.com)  
+🔗 [GitHub Profile](https://github.com/yourusername)
 
 ---
 
