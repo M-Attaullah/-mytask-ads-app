@@ -154,8 +154,8 @@ CREATE TABLE notes(
 **Your Name**  
 Feel free to connect or contribute to this project.
 
-📧 [your.email@example.com](mailto:your.email@example.com)  
-🔗 [GitHub Profile](https://github.com/yourusername)
+📧 [mattaullah9784@gmail.com](mattaullah9784@gmail.com)  
+🔗 [M-Attaullah](https://github.com/M-Attaullah)
 
 ---
 
