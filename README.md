@@ -22,9 +22,9 @@
 
 ## 📱 Screenshots
 
-| Home Screen | Add Task Screen | Completed Task Screen | Pending Task Screen |
+| Home Screen | Banner Ads Screen | Interstitial Ads Screen | App Open Ads Screen |
 |-------------|-----------------|--------------|--------------|
-| ![Home_Screen](screenshots/home-screen.png) | ![Add_task_screen](screenshots/add-task-screen.png) | ![Completed_Task_Screen](screenshots/completed-task-screen.png) | ![Pending_Task_Screen](screenshots/pending-task-screen.png) |
+| ![Home_Screen](screenshots/home-screen.png) | ![Banner_Ads_screen](screenshots/banner-ad.png) | ![Interstitial_Ads_Screen](screenshots/interstitial-ad.png) | ![App_Open_Ads_Screen](screenshots/app-open-ad.png) |
 
 ---
 
@@ -167,5 +167,6 @@ Feel free to connect or contribute to this project.
 ---
 
 > 📌 *This app was developed as part of a Flutter development project showcasing MVVM architecture, state management, and local database integration.*
+
 
 
