@@ -3,7 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../services/ad_manager.dart';
 
 class BannerContainer extends StatefulWidget {
-  const BannerContainer({Key? key}) : super(key: key);
+  const BannerContainer({super.key});
 
   @override
   State<BannerContainer> createState() => _BannerContainerState();
@@ -16,15 +16,16 @@ class _BannerContainerState extends State<BannerContainer> {
   @override
   void initState() {
     super.initState();
-    _bannerAd = AdManager.instance.createBannerAd();
-    _bannerAd?.load();
-    _bannerAd?.listener = BannerAdListener(
-      onAdLoaded: (ad) => setState(() => _isLoaded = true),
-      onAdFailedToLoad: (ad, error) {
-        ad.dispose();
-        setState(() => _isLoaded = false);
-      },
+    _bannerAd = AdManager.instance.createBannerAd(
+      listener: BannerAdListener(
+        onAdLoaded: (ad) => setState(() => _isLoaded = true),
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          setState(() => _isLoaded = false);
+        },
+      ),
     );
+    _bannerAd?.load();
   }
 
   @override

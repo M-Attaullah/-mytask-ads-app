@@ -4,11 +4,13 @@ import '../view_models/task_view_model.dart';
 import '../view_models/auth_view_model.dart';
 import '../view_models/task_view_model.dart' show NoteViewModel;
 import '../widgets/note_card.dart';
+import '../widgets/banner_container.dart';
+import '../services/ad_manager.dart';
 import '../models/task_model.dart';
 import 'add_edit_note_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -17,6 +19,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late TabController _tabController;
   String _searchQuery = '';
+  int _navigationCount = 0; // Track navigation count for interstitial ads
 
   @override
   void initState() {
@@ -149,6 +152,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: const Icon(Icons.add),
         tooltip: 'Add new note',
       ),
+      bottomNavigationBar: const BannerContainer(), // Add banner ad at bottom
     );
   }
 
@@ -197,15 +201,43 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   void _navigateToAddNote(BuildContext context) {
-    Navigator.of(
-      context,
-    ).push(MaterialPageRoute(builder: (context) => const AddEditNoteScreen()));
+    _navigationCount++; // Increment navigation count
+    
+    // Show debug info
+    debugPrint('Navigation count: $_navigationCount');
+    
+    // Show interstitial ad after every 3rd navigation
+    if (_navigationCount % 3 == 0) {
+      debugPrint('Attempting to show interstitial ad...');
+      AdManager.instance.showInterstitialBeforeNavigate(() {
+        debugPrint('Interstitial ad dismissed, navigating...');
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const AddEditNoteScreen()),
+        );
+      });
+    } else {
+      debugPrint('No ad this time, navigating directly...');
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const AddEditNoteScreen()),
+      );
+    }
   }
 
   void _navigateToEditNote(BuildContext context, Note note) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => AddEditNoteScreen(note: note)),
-    );
+    _navigationCount++; // Increment navigation count
+    
+    // Show interstitial ad after every 3rd navigation
+    if (_navigationCount % 3 == 0) {
+      AdManager.instance.showInterstitialBeforeNavigate(() {
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => AddEditNoteScreen(note: note)),
+        );
+      });
+    } else {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => AddEditNoteScreen(note: note)),
+      );
+    }
   }
 
   void _showDeleteDialog(

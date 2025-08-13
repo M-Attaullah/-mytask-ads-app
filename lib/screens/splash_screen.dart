@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../services/ad_manager.dart';
+import 'auth_wrapper.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -12,10 +12,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    // Simple navigation without AdManager to avoid getting stuck
     Future.delayed(const Duration(seconds: 2), () {
-      AdManager.instance.showAppOpenIfAvailable(() {
-        Navigator.of(context).pushReplacementNamed('/login');
-      });
+      if (mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const AuthWrapper()),
+        );
+      }
     });
   }
 

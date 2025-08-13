@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/task_model.dart';
 import '../view_models/task_view_model.dart';
+import '../widgets/banner_container.dart';
 
 class AddEditNoteScreen extends StatefulWidget {
   final Note? note; // null for add, note object for edit
 
-  const AddEditNoteScreen({Key? key, this.note}) : super(key: key);
+  const AddEditNoteScreen({super.key, this.note});
 
   @override
   State<AddEditNoteScreen> createState() => _AddEditNoteScreenState();
@@ -177,6 +178,7 @@ class _AddEditNoteScreenState extends State<AddEditNoteScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: const BannerContainer(), // Add banner ad at bottom
     );
   }
 

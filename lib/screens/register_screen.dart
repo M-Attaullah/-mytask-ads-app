@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../view_models/auth_view_model.dart';
+import '../widgets/banner_container.dart';
 import 'home_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -334,6 +335,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: const BannerContainer(), // Add banner ad at bottom
     );
   }
 }
