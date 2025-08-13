@@ -22,9 +22,9 @@
 
 ## 📱 Screenshots
 
-| Home Screen | Add Note Screen | Note Details |
-|-------------|-----------------|--------------|
-| ![Home](screenshots/home.png) | ![Add Note](screenshots/add_note.png) | ![Details](screenshots/details.png) |
+| Home Screen | Add Task Screen | Completed Task Screen | Pending Task Screen |
+|-------------|-----------------|--------------|--------------|
+| ![Home_Screen](screenshots/home-screen.png) | ![Add_task_screen](screenshots/add-task-screen.png) | ![Completed_Task_Screen](screenshots/completed-task-screen.png) | ![Pending_Task_Screen](screenshots/pending-task-screen.png) |
 
 ---
 
@@ -167,4 +167,5 @@ Feel free to connect or contribute to this project.
 ---
 
 > 📌 *This app was developed as part of a Flutter development project showcasing MVVM architecture, state management, and local database integration.*
+
 
