@@ -1,11 +1,12 @@
-# �️ Flutter Notes App
+# 📋 My Notes App – Flutter-Based Personal Note Keeper
 
-A beautiful and functional notes application built with Flutter, featuring local database storage, note management, and an intuitive user interface that helps you capture and organize your thoughts.
+## 🚀 Project Overview
+
+**My Notes App** is a sleek and intuitive note-taking app developed using **Flutter** and **Dart**. It allows users to create, view, update, and delete notes in real-time. Featuring modern UI design, secure authentication via Firebase, and efficient state management with Provider, it offers a responsive and user-friendly experience across devices.
 
 ---
 
-
-## 🚀 Features
+## 🌟 Features
 
 - ✨ **Create Notes** - Add new notes with title, content, date, and color
 - 📋 **View Notes** - Display all notes in an organized list with search
@@ -19,17 +20,13 @@ A beautiful and functional notes application built with Flutter, featuring local
 
 ---
 
-
 ## 📱 Screenshots
 
 | Home Screen | Add Note Screen | Note Details |
 |-------------|-----------------|--------------|
 | ![Home](screenshots/home.png) | ![Add Note](screenshots/add_note.png) | ![Details](screenshots/details.png) |
 
-> 📸 Place your screenshots in a `/screenshots` folder at project root.
-
 ---
-
 
 ## 📂 Project Structure
 
@@ -161,12 +158,13 @@ CREATE TABLE notes(
 
 ## 🙌 Author
 
-**Your Name**  
+**Muhammad Attaullah**  
 Feel free to connect or contribute to this project.
 
-📧 [your.email@example.com](mailto:your.email@example.com)  
-🔗 [GitHub Profile](https://github.com/yourusername)
+[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white)](https://github.com/M-Attaullah) [*M-Attaullah*](https://github.com/M-Attaullah)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-attaullah-705764333/) [*Muhammad Attaullah*](https://www.linkedin.com/in/muhammad-attaullah-705764333/)
 
 ---
 
 > 📌 *This app was developed as part of a Flutter development project showcasing MVVM architecture, state management, and local database integration.*
+
